@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<!-- MENU -->
+<div class="container">
+        <br>
+        <%= link_to "Lista de projetos", projects_path, :class => "btn btn-primary" %>
+        <%= link_to "Lista de tarefas", tasks_path, :class => "btn btn-primary"  %>
+        
+    <%= link_to "Novo projeto", new_project_path, :class => "btn btn-inverse" %>
+        <%= link_to "Nova tarefa", new_task_path, :class => "btn btn-inverse" %>
+   <%= yield %>
 
-<%= yield %>
-
+</div>
 </body>
 </html>

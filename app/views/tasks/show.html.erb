@@ -1,1 +1,5 @@
-<%= @task.name %>
+<h3>Nome:</h3> <%= @task.name %><br>
+<h3>Descricao: </h3><%= @task.description %>
+<br>
+<%= link_to "Finalizar tarefa", task_path,
+    confirm: "Certeza que deseja finalizar a tarefa", :method => "delete" %>

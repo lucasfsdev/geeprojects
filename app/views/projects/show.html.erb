@@ -5,4 +5,9 @@
 <% @tasks.each do |t| %>
     <%= link_to t.name, :controller => 'tasks', :action => 'show', :id => t.id %>
 <% end %>
-</p>
+<br></p>
+<%= link_to "Nova tarefa", new_task_path, idp: @project.id %>
+
+<br><br>
+<%= link_to "Finalizar projeto", project_path, 
+    confirm: "Tem certeza que quer finalizar esse projeto?", :method => :delete %>
