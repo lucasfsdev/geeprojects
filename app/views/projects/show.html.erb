@@ -1,0 +1,8 @@
+<p>
+<strong>Projeto:</strong>
+<%= @project.title %>
+<h3>Tasks:</h3>
+<% @tasks.each do |t| %>
+    <%= link_to t.name, :controller => 'tasks', :action => 'show', :id => t.id %>
+<% end %>
+</p>

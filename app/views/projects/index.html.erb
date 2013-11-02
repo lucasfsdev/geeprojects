@@ -1,0 +1,8 @@
+<h1>Lista de projetos ATIVOS</h1>
+
+
+
+<% @projects.each do |p| %>
+
+<p><%= link_to p.title, project_path(p.id) %><br></p>
+<% end %>
